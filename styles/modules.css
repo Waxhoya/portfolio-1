@@ -8,21 +8,21 @@ main {
   margin: 3% 3% 0 0;
 }
 
-nav {
-}
-
 nav ul {
-  padding: 0;
-  text-align: center;
-}
-
-nav {
   display: none;
 }
 
+.social-links:hover ul {
+  display: block;
+}
+
 @media only screen and (min-width: 440px) {
-  nav {
+  nav ul {
     display: block;
+  }
+
+  .icon-menu {
+    display: none;
   }
 }
 
