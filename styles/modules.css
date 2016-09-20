@@ -16,6 +16,10 @@ nav ul {
   display: block;
 }
 
+nav li {
+  max-width: 100%;
+}
+
 @media only screen and (min-width: 440px) {
   nav ul {
     display: block;
@@ -28,9 +32,9 @@ nav ul {
 
 nav li {
   display: inline-block;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 15px;
   padding: 1em;
-  width: 5%;
+  width: 60px;
   margin-right: 1%;
 }
