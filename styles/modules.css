@@ -30,6 +30,17 @@ nav li {
   .icon-menu {
     display: none;
   }
+
+  article {
+    display: inline-block;
+    width: 50%;
+
+  }
+
+  #projects {
+    width: 1000px;
+    margin: auto;
+  }
 }
 
 nav li {

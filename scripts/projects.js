@@ -13,10 +13,12 @@ function Project(opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('projects.template').clone();
+  var $newProject = $('#projects .template').clone();
 
   $newProject.find('.author').html(this.author);
   $newProject.find('h1').html(this.title);
+  $newProject.find('.project_body').html(this.description);
+  $newProject.find('time').html(this.completedOn);
 
 
   $newProject.removeClass('template');
