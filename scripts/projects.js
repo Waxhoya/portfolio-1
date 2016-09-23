@@ -13,17 +13,23 @@ function Project(opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('#projects .template').clone();
 
-  $newProject.find('.author').html(this.author);
-  $newProject.find('h1').html(this.title);
-  $newProject.find('.project_body').html(this.description);
-  $newProject.find('time').html(this.completedOn);
+  var source = $('#projects-template').html();
+  var template = Handlebars.compile(source);
 
-
-  $newProject.removeClass('template');
-
-  return $newProject;
+  var html = template(this);
+  return html;
+  // var $newProject = $('#projects .template').clone();
+  //
+  // $newProject.find('.author').html(this.author);
+  // $newProject.find('h1').html(this.title);
+  // $newProject.find('.project_body').html(this.description);
+  // $newProject.find('time').html(this.completedOn);
+  //
+  //
+  // $newProject.removeClass('template');
+  //
+  // return $newProject;
 };
 
 projectData.forEach(function(ele) {
