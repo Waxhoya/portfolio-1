@@ -36,7 +36,7 @@ nav li {
   article {
     display: inline-block;
     width: 49%;
-
+    vertical-align: top;
   }
 
   #projects {
