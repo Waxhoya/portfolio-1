@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script id="projects-template" type="text/x-handlebars-template">
+      <article class="clearfix">
+          <header>
+            <h1>{{title}}</h1>
+            <div class="info">
+              By <div class="author">{{author}}</div>
+              {{completionStatus}}
+            </div>
+          </header>
+          <section class="project_body">{{{description}}}</section>
+      </article>
+    </script>
     <title>Portfolio</title>
   </head>
   <body>
@@ -28,22 +40,12 @@
 
     <main>
       <section id="projects">
-        <article class="template">
-          <header>
 
-            <h1>Title</h1>
-
-            <div class="info">
-              By <div class="author">Author Name</div>
-              Completed On <time pubdate datetime="2000-01-01">Completion Time</time>
-            </div>
-
-          </header>
-        </article>
       </section>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="scripts/portfolio_projects.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
   </body>

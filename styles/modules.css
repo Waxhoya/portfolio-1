@@ -30,6 +30,21 @@ nav li {
   .icon-menu {
     display: none;
   }
+
+  main {
+    margin: auto;
+  }
+
+  article {
+    display: inline-block;
+    width: 49%;
+
+  }
+
+  #projects {
+    width: 1000px;
+    margin: auto;
+  }
 }
 
 nav li {
