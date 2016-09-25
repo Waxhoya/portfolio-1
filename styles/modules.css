@@ -4,13 +4,11 @@ header {
   margin-top: 1%;
 }
 
-
-
 nav ul {
   display: none;
 }
 
-.social-links:hover ul {
+.main-nav:hover ul {
   display: block;
   padding: 0;
 }
