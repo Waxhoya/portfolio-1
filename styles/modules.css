@@ -1,6 +1,5 @@
 header {
   text-align: center;
-  /*border: 1px solid black;*/
   border-radius: 15px;
   margin-top: 1%;
 }
@@ -10,19 +9,37 @@ nav ul {
   padding: 0;
 }
 
-.main-nav:hover ul {
+nav:hover ul {
   display: block;
   padding-bottom: 1%;
 }
 
 nav li {
-  max-width: 100%;
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 1em;
+  width: 70px;
+  margin-right: 1%;
+  margin-bottom: 2%;
+}
+
+.template {
+  display: none;
+}
+
+#projects {
+  border-radius: 15px;
 }
 
 @media only screen and (min-width: 440px) {
   nav ul {
     display: block;
     padding-bottom: 1%;
+  }
+
+  nav li {
+    margin-bottom: 0;
   }
 
   .icon-menu {
@@ -55,17 +72,4 @@ nav li {
     margin: 2% auto;
     border-radius: 15px;
   }
-}
-
-nav li {
-  display: inline-block;
-  border: 2px solid black;
-  border-radius: 15px;
-  padding: 1em;
-  width: 60px;
-  margin-right: 1%;
-}
-
-.template {
-  display: none;
 }
