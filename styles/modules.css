@@ -1,18 +1,18 @@
 header {
   text-align: center;
-  border-bottom: 1px solid black;
+  /*border: 1px solid black;*/
+  border-radius: 15px;
   margin-top: 1%;
 }
 
-
-
 nav ul {
   display: none;
+  padding: 0;
 }
 
-.social-links:hover ul {
+.main-nav:hover ul {
   display: block;
-  padding: 0;
+  padding-bottom: 1%;
 }
 
 nav li {
@@ -22,7 +22,7 @@ nav li {
 @media only screen and (min-width: 440px) {
   nav ul {
     display: block;
-    padding: 0;
+    padding-bottom: 1%;
   }
 
   .icon-menu {
@@ -33,6 +33,11 @@ nav li {
     margin: auto;
   }
 
+  /*header {
+    width: 1000px;
+    margin: auto;
+  }*/
+
   article {
     display: inline-block;
     width: 49%;
@@ -41,7 +46,14 @@ nav li {
 
   #projects {
     width: 1000px;
-    margin: auto;
+    margin: 2% auto;
+    border-radius: 15px;
+  }
+
+  #about {
+    width: 1000px;
+    margin: 2% auto;
+    border-radius: 15px;
   }
 }
 
