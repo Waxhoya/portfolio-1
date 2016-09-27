@@ -9,7 +9,7 @@ function Project(opts) {
   this.description = opts.description;
 }
 
-Projects.all = [];
+Project.all = [];
 
 Project.prototype.toHtml = function() {
 
@@ -24,23 +24,44 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(passedData) {
-  forEach(function(ele) {
+  passedData.forEach(function(ele) {
     Project.all.push(new Project(ele));
   });
 };
 
 Project.fetchAll = function() {
-  if(localStorage.)
+  if(localStorage.portfolioProjects) {
+    var storedData = JSON.parse(localStorage.getItem('portfolioProjects'));
+    Project.loadAll(storedData);
+  } else {
+    $.ajax('/data/portfolioProjects.json', {
+      method: 'GET',
+      success: successHandler,
+      error: errorHandler
+    });
+  }
 };
 
-projectData.sort(function(curElem, nextElem) {
-  return (new Date(nextElem.published)) - (new Date(curElem.published));
-});
+function successHandler(data) {
+  localStorage.setItem('portfolioProjects', JSON.stringify(data));
+  console.log('Data:', data);
+  projectView.renderIndexPage();
+}
 
-projectData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+function errorHandler(error) {
+  console.log('ERROR!', error);
+}
 
-projects.forEach(function(a) {
-  $('#projects').append(a.toHtml());
-});
+Project.fetchAll();
+
+// projectData.sort(function(curElem, nextElem) {
+//   return (new Date(nextElem.published)) - (new Date(curElem.published));
+// });
+//
+// projectData.forEach(function(ele) {
+//   projects.push(new Project(ele));
+// });
+//
+// projects.forEach(function(a) {
+//   $('#projects').append(a.toHtml());
+// });

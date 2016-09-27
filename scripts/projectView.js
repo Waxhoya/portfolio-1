@@ -12,4 +12,18 @@ projectView.handleMainNav = function() {
   });
   $('nav .tab:first').click(); // not working yet
 };
-projectView.handleMainNav();
+
+projectView.renderIndexPage = function() {
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml('#project-template'));
+    if($('#category-filter option:contains("' + a.category + '")').length === 0) {
+      $('#category-filter').append(a.toHtml('#category-filter-template'));
+    };
+    if($('#author-filter option:contains("' + a.author + '")').length === 0) {
+      $('#author-filter').append(a.toHtml('#author-filter-template'));
+    };
+  });
+  projectView.handleMainNav();
+};
+
+projectView.renderIndexPage();
