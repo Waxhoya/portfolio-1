@@ -1,6 +1,21 @@
 body {
   width: 80%;
   margin: 0 auto;
+  background-color: #03A9F4;
+}
+
+header {
+  background-color: #BBDEFB;
+}
+
+#projects {
+  margin-top: 10px;
+  background-color: #BBDEFB
+}
+
+#about {
+  margin-top: 10px;
+  background-color: #BBDEFB
 }
 
 main {
