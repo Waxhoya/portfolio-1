@@ -9,7 +9,7 @@ function Project(opts) {
   this.description = opts.description;
 }
 
-Project.all = [];
+Project.allProjects = [];
 
 Project.prototype.toHtml = function() {
 
@@ -24,12 +24,13 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(passedData) {
-  passedData.forEach(function(ele) {
-    Project.all.push(new Project(ele));
+  Project.allProjects = passedData.map(function(ele) {
+    return new Project(ele);
   });
 };
 
-Project.fetchAll = function() {
+// continue refactoring here
+Project.fetchAll = function(nextFunction) {
   if(localStorage.portfolioProjects) {
     var storedData = JSON.parse(localStorage.getItem('portfolioProjects'));
     Project.loadAll(storedData);
