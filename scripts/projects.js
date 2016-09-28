@@ -33,6 +33,7 @@ Project.fetchAll = function() {
   if(localStorage.portfolioProjects) {
     var storedData = JSON.parse(localStorage.getItem('portfolioProjects'));
     Project.loadAll(storedData);
+    console.log('Stored data loaded', storedData);
   } else {
     $.ajax('/data/portfolioProjects.json', {
       method: 'GET',
@@ -43,8 +44,9 @@ Project.fetchAll = function() {
 };
 
 function successHandler(data) {
+  Project.loadAll(data);
   localStorage.setItem('portfolioProjects', JSON.stringify(data));
-  console.log('Data:', data);
+  console.log('Data retrieved:', data);
   projectView.renderIndexPage();
 }
 
