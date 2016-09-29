@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script id="projects-template" type="text/x-handlebars-template">
-      <article class="clearfix">
+      <article class="clearfix" data-title="{{title}}" data-author="{{author}}">
           <header>
             <h1>{{title}}</h1>
             <div class="info">
@@ -20,6 +20,12 @@
           <section class="project_body">{{{description}}}</section>
       </article>
     </script>
+    <script id="title-filter-template" type="text/x-handlebars-template">
+      <option value="{{title}}">{{title}}</option>
+      </script>
+      <script id="author-filter-template" type="text/x-handlebars-template">
+        <option value="{{author}}">{{author}}</option>
+      </script>
     <title>Portfolio</title>
   </head>
   <body>
@@ -42,12 +48,12 @@
         <div>
           <ul id="filters">
             <li>
-              <select id="author-filter">
-                <option value="">-- Filter by Author</option>
+              <select id="title-filter">
+                <option value="">-- Filter by Title</option>
               </select>
             </li>
-            <select id="category-filter">
-              <option value="">-- Filter by Category</option>
+            <select id="author-filter">
+              <option value="">-- Filter by Author</option>
             </select>
           </ul>
         </div>
