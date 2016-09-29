@@ -1,7 +1,13 @@
 header {
+  width: 80%;
   text-align: center;
   border-radius: 15px;
-  margin-top: 1%;
+  margin: auto;
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+article header {
+  background-color: inherit;
 }
 
 nav ul {
@@ -43,8 +49,22 @@ nav li {
   display: none;
 }
 
-#projects {
+#projects,
+#about {
+  width: 80%;
+  margin: 2% auto;
   border-radius: 15px;
+  background-color: rgba(150, 150, 150, 0.6);
+}
+
+#about h1 {
+  display: block;
+  text-align: center;
+  padding-top: 1%;
+}
+
+#about p {
+  padding-bottom: 1%;
 }
 
 @media only screen and (min-width: 440px) {
@@ -74,17 +94,5 @@ nav li {
     display: inline-block;
     width: 49%;
     vertical-align: top;
-  }
-
-  #projects {
-    width: 1000px;
-    margin: 2% auto;
-    border-radius: 15px;
-  }
-
-  #about {
-    width: 1000px;
-    margin: 2% auto;
-    border-radius: 15px;
   }
 }
