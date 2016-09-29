@@ -27,5 +27,6 @@
     });
     projectView.handleMainNav();
   };
+  Project.fetchAll(projectView.renderIndexPage);
   module.projectView = projectView;
 })(window);
