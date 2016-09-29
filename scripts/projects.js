@@ -31,13 +31,13 @@
   };
 
   Project.fetchAll = function(nextFunction) {
-    if (localStorage.portfolioProjects) {
+    if (localStorage.portfolioProjects || localStorage.eTag) {
       $.ajax({
         type: 'HEAD',
         url: '/data/portfolioProjects.json',
         success: function(data, message, xhr) {
           var eTag = xhr.getResponseHeader('eTag');
-          if(!localStorage.eTag || eTag !== localStorage.eTag) {
+          if(eTag !== localStorage.eTag) {
             localStorage.eTag = eTag;
             Project.getAll(nextFunction);
           } else {
