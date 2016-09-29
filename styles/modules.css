@@ -24,6 +24,21 @@ nav li {
   margin-bottom: 2%;
 }
 
+#filters {
+  text-align: center;
+  list-style: none;
+  padding: 5px 0 0 0;
+}
+
+#filters li {
+  display: inline-block;
+}
+
+#filters select {
+  width: 166px;
+  margin-top: 5px;
+}
+
 .template {
   display: none;
 }
