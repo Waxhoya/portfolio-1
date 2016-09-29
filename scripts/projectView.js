@@ -1,5 +1,7 @@
 'use strict';
 
+$('#about').hide();
+
 (function(module) {
 
   var projectView = {};
@@ -25,7 +27,6 @@
       console.log($text);
       $('#' + $text).show();
     });
-    $('nav .tab:first').click(); // not working yet
   };
 
   projectView.renderIndexPage = function() {
