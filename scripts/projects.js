@@ -33,7 +33,7 @@
   Project.fetchAll = function(nextFunction) {
     if (localStorage.portfolioProjects || localStorage.eTag) {
       $.ajax({
-        type: 'HEAD',
+        method: 'HEAD',
         url: '/data/portfolioProjects.json',
         success: function(data, message, xhr) {
           var eTag = xhr.getResponseHeader('eTag');
