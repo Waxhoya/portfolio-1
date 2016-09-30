@@ -4,10 +4,13 @@ header {
   border-radius: 15px;
   margin: auto;
   background-color: rgba(150, 150, 150, 0.5);
+  border-style: ridge;
+  border-color: grey;
 }
 
 article header {
   background-color: inherit;
+  border-style: none;
 }
 
 nav ul {
@@ -59,6 +62,8 @@ nav li:hover {
   margin: 2% auto;
   border-radius: 15px;
   background-color: rgba(150, 150, 150, 0.6);
+  border-style: ridge;
+  border-color: grey;
 }
 
 #about h1 {
