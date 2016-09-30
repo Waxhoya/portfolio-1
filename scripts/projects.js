@@ -4,11 +4,14 @@
 
   // constructor function to create projects
   function Project(opts) {
-    this.title = opts.title;
-    this.author = opts.author;
-    this.repoUrl = opts.repoUrl;
-    this.published = opts.published;
-    this.description = opts.description;
+    Object.keys(opts).forEach(function(prop, index, keys) { //eslint-disable-line
+      this[prop] = opts[prop];
+    }, this);
+    // this.title = opts.title;
+    // this.author = opts.author;
+    // this.repoUrl = opts.repoUrl;
+    // this.published = opts.published;
+    // this.description = opts.description;
   }
 
   Project.allProjects = [];
